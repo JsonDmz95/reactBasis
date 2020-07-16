@@ -14,15 +14,32 @@ const Product = ({product, car, products, addProduct}) => {
     ]);
   }
 
+  //Remove Product from car
+  const removeProduct = id => {
+    const products = car.filter(product => product.id !== id);
+
+    //Set severals prodcuts in state
+    addProduct(products)
+  }
+
   return ( 
     <div>
       <h2>{name}</h2>
       <p>${price}</p>
-      <button
-        type="buttom"
-        onClick={() => selectProduct(id)}
-      >Comprar</button>
-    
+
+      {
+        products ?
+          <button
+            type="buttom"
+            onClick={() => selectProduct(id)}
+          >Buy</button>
+        :
+          <button
+            type="buttom"
+            onClick={() => removeProduct(id)}
+          >Remove</button>
+        
+      }
     </div>
    );
 }

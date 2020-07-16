@@ -34,7 +34,10 @@ function App() {
         />
       ))}
 
-      <Car car={car}/>
+      <Car 
+        car={car}
+        addProduct={addProduct}
+      />
 
       <Footer date={date} />
     </Fragment>
