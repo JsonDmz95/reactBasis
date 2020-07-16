@@ -1,0 +1,8 @@
+.car{
+  position: fixed;
+  top: 0;
+  right: 15px;
+  background: 0;
+  display: inline-block;
+  /* width: auto; */
+}

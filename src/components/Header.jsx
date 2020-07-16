@@ -1,10 +1,7 @@
-import React from 'react';
+import React from "react";
 
-function Header(){
-
-  return(
-    <h1 className="tagline">E-commerce Demo</h1>
-  );
+function Header({ text }) {
+  return <h1 className="tagline">{text}</h1>;
 }
 
 export default Header;
